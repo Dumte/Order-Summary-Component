@@ -1,0 +1,123 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* setting the variables for easy access */
+:root {
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --saturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --pc: 144rem;
+    --mobile: 37.5rem;
+    --fs-body: 1.4rem;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+body {
+    font-size: var(--fs-body);
+    background-color: var(--Pale-blue);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    width: var(--pc)
+    overflow: hidden;
+}
+
+.card-container {
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 450px;
+    grid-template-rows: repeat(3, 1fr);
+    box-shadow: 0px 0px 30px var(--saturated-blue);
+}
+
+.card-image > img {
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    border-bottom: 0px;
+}
+
+.card-text {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+    grid-row: 2/4;
+    height: 100%;
+    border-top: 0px;
+    border-radius: 0 0 20px 20px;
+    background-color: var(--Very-pale-blue);
+}
+
+.card-text h1 {
+    font-weight: var(--fw-700);
+    font-family: var(--Bright-blue);
+}
+.card-text > p {
+    color: var(--saturated-blue);
+    line-height: 30px;
+    margin-top: 0;
+}
+
+.pricing {
+    width: 300px;
+    height: auto;
+    display: grid;
+    padding: 10px;
+    gap: 5px;
+    place-items: center;
+    grid-template-columns: repeat(3, auto);
+    gap: 5px;
+    background: rgba(224, 232, 255, 0.3);
+    border-radius: 12px;
+}
+.pricing > a {
+    color: var(--Bright-blue);
+    font-size: 0.9rem;
+    margin-left: 1.6rem;
+}
+
+.price > p {
+    color: var(--saturated-blue);
+    text-align: left;
+    margin-top: 8px;
+}
+
+.btns {
+    width: 70%;
+    display: grid;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+}
+
+.btns > button {
+    background-color: var(--Bright-blue);
+    padding: 20px;
+    border-radius: 7px;
+    color: var(--Very-pale-blue);
+    font-weight: var(--fw-900);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.btns > a {
+    text-decoration: none;
+    color: var(--Dark-blue);
+    font-weight: var(--fw-500);
+    font-size: 1.2rem;
+}
+
+/* When the screen is at most 700px, the following piece of styling should apply */
+@media only screen and (max-width: 700px) {
+
+    
+}
